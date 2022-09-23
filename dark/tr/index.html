@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Alper Karaca'nın Kişisel Sayfası</title>
+		<link rel="stylesheet" href="/dark/darkstyle.css">
+		<link href="/favicon.png" rel="shortcut icon" type="image/x-icon" />
+	</head>
+	<body>
+		<div class="container">
+			<div id="clock"></div>
+			<div class="bookmark-container">
+				<div class="bookmark-set">
+					<div class="bookmark-title">Ben Kimim</div>
+					<div class="bookmark-inner-container">
+						<a href="404.html" class="bookmark">Ben Kimim?</a>
+						<!-- <a class="bookmark" href="../../resume/resume.html">Ben Kimim?</a> -->
+					</div>
+				</div>
+				<div class="bookmark-set">
+					<div class="bookmark-title">Sosyal Medya</div>
+					<div class="bookmark-inner-container">
+						<a class="bookmark" href="../sociallinks/social.html">Sosyal Medya Ve İletişim</a>
+					</div>
+				</div>
+				<div class="bookmark-set">
+					<div class="bookmark-title">Projelerim</div>
+					<div class="bookmark-inner-container">
+						<a class="bookmark" href="https://github.com/alpeerkaraca" target="_blank">Github</a>
+						<a class="bookmark" href="#" target="_blank">This Page</a>
+					</div>
+				</div>
+				<div class="bookmark-set">
+					<div class="bookmark-title">Linkler</div>
+					<div class="bookmark-inner-container">
+						<a class="bookmark" href="/dark/tr/">🇹🇷  Türkçe</a>
+						<a class="bookmark" href="/dark/">🇺🇸  English</a>
+						<a class="bookmark" href="/tr/">☀️ Aydınlık Mod!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			// Get current time and format
+			function getTime() {
+				let date = new Date(),
+					min = date.getMinutes(),
+					sec = date.getSeconds(),
+					hour = date.getHours();
+				return "" + (hour < 10 ? ("0" + hour) : hour) + ":" + (min < 10 ? ("0" + min) : min) + ":" + (sec < 10 ? ("0" + sec) : sec);
+			}
+			window.onload = () => {
+				// Set up the clock
+				document.getElementById("clock").innerHTML = getTime();
+				// Set clock interval to tick clock
+				setInterval(() => {
+					document.getElementById("clock").innerHTML = getTime();
+				}, 100);
+			}
+		</script>
+	</body>
+</html>

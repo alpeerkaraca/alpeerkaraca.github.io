@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Alper Karaca's Personal Page</title>
+		<link rel="stylesheet" href="/styles.css">
+		<link href="/favicon.png" rel="shortcut icon" type="image/x-icon" />
+		<img src="/pp.png" style="display: none;" />
+		<p style="display: none;">Hi, this is my personal page.</p>
+	</head>
+	<body>
+		<div class="container">
+			<div id="clock"></div>
+			<div class="bookmark-container">
+				<div class="bookmark-set">
+					<div class="bookmark-title">Who Am I?</div>
+					<div class="bookmark-inner-container">
+						<!-- <a class="bookmark" href="resume/resume.html">Who Am I?</a> -->
+						<a href="404.html" class="bookmark">Who Am I?</a>
+					</div>
+				</div>
+				<div class="bookmark-set">
+					<div class="bookmark-title">My Social Media</div>
+					<div class="bookmark-inner-container">
+						<a class ="bookmark"href="sociallinks/social.html">Social Media and Contact</a>
+					</div>
+				</div>
+				<div class="bookmark-set">
+					<div class="bookmark-title">My Projects</div>
+					<div class="bookmark-inner-container">
+						<a class="bookmark" href="https://github.com/alpeerkaraca" target="_blank">Github</a>
+						<a class="bookmark" href="#" target="_blank">This Page</a>
+					</div>
+				</div>
+				<div class="bookmark-set">
+					<div class="bookmark-title">Page Settings</div>
+					<div class="bookmark-inner-container">
+						<a class="bookmark" href="/">🇺🇸 English</a>
+						<a class="bookmark" href="/tr/">🇹🇷 Türkçe</a>
+						<a class="bookmark" href="/dark/">🌙 Dark Mode!</a>
+					</div>
+				</div>
+			</div>
+			<script>
+				// Get current time and format
+				function getTime() {
+					let date = new Date(),
+						min = date.getMinutes(),
+						sec = date.getSeconds(),
+						hour = date.getHours();
+					return "" + (hour < 10 ? ("0" + hour) : hour) + ":" + (min < 10 ? ("0" + min) : min) + ":" + (sec < 10 ? ("0" + sec) : sec);
+				}
+				window.onload = () => {
+					// Set up the clock
+					document.getElementById("clock").innerHTML = getTime();
+					// Set clock interval to tick clock
+					setInterval(() => {
+						document.getElementById("clock").innerHTML = getTime();
+					}, 100);
+				}
+			</script>
+	</body>
+</html>

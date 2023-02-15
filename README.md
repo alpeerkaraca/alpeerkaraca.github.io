@@ -11,7 +11,7 @@ This homepage is suppose to contain all my personal media and my personal projec
 * english and turkish support
 * [error page](https://alper.karaca/404.html)
 * [dark mode](https://alper.karaca/dark)
-
+* [resume page](https://alper.karaca/resume)
 ## Work in Progress Features
 
-* [resume page](#)
+* [Got no idea send me your ideas.]
